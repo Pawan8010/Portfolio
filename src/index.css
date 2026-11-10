@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --term-bg: #07090e;
+  --term-surface: #0c101c;
+  --term-card: #0e1424;
+  --term-border: #1e293b;
+  --term-accent: #38bdf8;
+  --term-accent-hover: #7dd3fc;
+  --term-accent-dim: rgba(56, 189, 248, 0.12);
+  --term-text: #f1f5f9;
+  --term-muted: #94a3b8;
+  --term-prompt: #22d3ee;
+  --term-selection-bg: rgba(56, 189, 248, 0.25);
+  --term-selection-text: #38bdf8;
+}
+
+[data-theme="matrix"] {
+  --term-bg: #040805;
+  --term-surface: #071208;
+  --term-card: #0b1a0d;
+  --term-border: #133818;
+  --term-accent: #22c55e;
+  --term-accent-hover: #4ade80;
+  --term-accent-dim: rgba(34, 197, 94, 0.15);
+  --term-text: #dcfce7;
+  --term-muted: #86efac;
+  --term-prompt: #4ade80;
+  --term-selection-bg: rgba(34, 197, 94, 0.3);
+  --term-selection-text: #86efac;
+}
+
+[data-theme="amber"] {
+  --term-bg: #080603;
+  --term-surface: #120e06;
+  --term-card: #1c1508;
+  --term-border: #38270a;
+  --term-accent: #f59e0b;
+  --term-accent-hover: #fbbf24;
+  --term-accent-dim: rgba(245, 158, 11, 0.15);
+  --term-text: #fef3c7;
+  --term-muted: #fde68a;
+  --term-prompt: #fbbf24;
+  --term-selection-bg: rgba(245, 158, 11, 0.3);
+  --term-selection-text: #fde68a;
+}
+
+@layer base {
+  body {
+    font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace;
+    background-color: var(--term-bg);
+    color: var(--term-text);
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'JetBrains Mono', 'Outfit', monospace;
+    letter-spacing: -0.02em;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Terminal custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--term-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--term-border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--term-accent);
+}
+
+/* Subtle CRT phosphor scanline overlay (optional ambient vibe) */
+.crt-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+}

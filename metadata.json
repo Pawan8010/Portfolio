@@ -1,0 +1,6 @@
+{
+  "name": "Pawan Rajput Portfolio",
+  "description": "Terminal developer portfolio for Pawan Rajput — CSE AIML, Systems & Robotics Engineer. Featuring live project deep dives, OpsBrain RAG simulator, and resume.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
